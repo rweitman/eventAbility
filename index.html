@@ -24,73 +24,86 @@
 		</ul>
 	</div> <!-- END NAVIGATION -->
 
-	<div class="container">
-		<div class="row">
-			<div class="col s8 offset-s2">
+	<div>
+		<div>
+			<div>
 				<p class="lead center-align">Find events near you.</p>
 			</div>
 		</div>
 
-		<div class="row info borderRight">
-			<form class="col s12 m4 l3 borderRight borderBottom">
-				<p class="col s12 center-align">Your Info</p>
-				<div class="row">
-					<div class="input-field col s12">
+		<div>
+			<form class="infoForm">
+				<p class="center-align">Your Info</p>
+				<div>
+					<div>
 						<input placeholder="Zip Code" id="zip" type="text" class="validate">
 					</div>
-					<div class="input-field col s12">
+					<div>
 						<input placeholder="Email" id="email" type="text" class="validate">
 					</div>
-					<div class="input-field col s12">
-						<input placeholder="Distance" id="distance" type="text" class="validate">
+					<div class="input-field">
+						<select>
+							<option value="5">5 mi.</option>
+							<option value="10">10 mi.</option>
+							<option value="25">25 mi.</option>
+							<option value="50">50 mi.</option>
+						</select>
+						<label>Distance to Search</label>
 					</div>
-					<div class="col s12">
-						<p class="col s12 center-align">Your Interests</p>
-						<p class="col s6 left-align">Music</p>
-						<p class="col s6 left-align">Arts</p>
-						<p class="col s6 left-align">Food</p>
-						<p class="col s6 left-align">Comedy</p>
-						<p class="col s6 left-align">Family</p>
-						<p class="col s6 left-align">Outdoor</p>
+					<div class="input-field">
+						<select multiple>
+							<option value="music">Music</option>
+							<option value="arts">Arts</option>
+							<option value="food">Food</option>
+							<option value="comedy">Comedy</option>
+							<option value="family">Family</option>
+							<option value="outdoor">Outdoor</option>
+						</select>
+						<label>Your Interests</label>
 					</div>
-					<div class="input-field col s12">
-						<input placeholder="Category Search" id="zip" type="text" class="validate">
+					<div class="input-field">
+						<input type="date" class="datepicker">
+						<label>Pick a Date</label>
 					</div>
-					<div class="col s12">
-						<button class="col s12 btn waves-effect waves-light" type="submit" name="action">Submit</button>
+					<div>
+						<button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
 					</div>
 				</div>
 			</form>
-		<!-- </div> -->
 
-		<!-- <div class="row"> -->
-			
-			<div class="carousel carousel-slider center col s12 m8 l8 offset-l1" data-indicators="true">
-    			<div class="carousel-item indigo lighten-3" href="#one!">
-			    	<h2><a href="#" class="white-text">Event Title</a></h2>
-			    	<p class="left-align col s12 white-text">Time: 12:00PM</p>
-			    	<p class="left-align col s12 white-text">Address: 1234 Random St</p>
-			    	<p class="left-align col s12 white-text">Description: Music, drink, and fun with friends</p>
-
-			    </div>
-			    <div class="carousel-item amber white-text" href="#two!">
-			    	<h2>Second Panel</h2>
-			    	<p class="white-text">This is your second panel</p>
-			    </div>
-			    <div class="carousel-item green white-text" href="#three!">
-			    	<h2>Third Panel</h2>
-			    	<p class="white-text">This is your third panel</p>
-			    </div>
-			    <div class="carousel-item blue white-text" href="#four!">
-			    	<h2>Fourth Panel</h2>
-			    	<p class="white-text">This is your fourth panel</p>
-			    </div>
-  			</div>
+			<div class="carouselHolder">		
+				<div class="carousel carousel-slider" data-indicators="true">
+	    			<div class="carousel-item indigo lighten-3" href="#one!">
+	    				<div class="eventInfo">
+					    	<h2><a href="#" class="white-text">Event Title</a></h2>
+					    	<p class="left-align white-text">Time: 12:00PM</p>
+					    	<p class="left-align white-text">Address: 1234 Random St</p>
+					    	<p class="left-align white-text">Description: Music, drink, and fun with friends</p>
+					    </div>
+					    <div class="eventLoc">
+					    	
+					    	<!-- <img src="https://placeholdit.co//i/50x50"> -->
+					    </div>
+				    </div>
+				    <div class="carousel-item amber white-text" href="#two!">
+				    	<h2>Second Panel</h2>
+				    	<p class="white-text">This is your second panel</p>
+				    </div>
+				    <div class="carousel-item green white-text" href="#three!">
+				    	<h2>Third Panel</h2>
+				    	<p class="white-text">This is your third panel</p>
+				    </div>
+				    <div class="carousel-item blue white-text" href="#four!">
+				    	<h2>Fourth Panel</h2>
+				    	<p class="white-text">This is your fourth panel</p>
+				    </div>
+	  			</div>
+	  		</div>
 		</div>
 		
 		
 		
-	</div> <!-- END CONTAINER -->
+	
 
 <!-- jQuery 3.x Minified -->
 <script

@@ -19,8 +19,10 @@
 	font-weight: bold;
 }
 
-.info {
+.infoForm {
 	color: #000;
+	width: 90%;
+	margin: 20px auto;
 }
 
 .borderRight {
@@ -28,9 +30,16 @@
 }
 
 
-.carousel:nth-child(1) {
-	background: #000 url("https://placeholdit.co//i/50x50") 0 0 no-repeat;
-	/*background-size: 100% 100%;*/
+.carouselHolder {
+	width: 90%;
+	margin: 30px auto;
+	
+}
+
+.carousel.carousel-slider .carousel-item {
+	border-radius: 15px 50px 0 0;
+	padding: 10px;
+	
 }
 
 @media screen and (min-width: 480px) {
@@ -61,18 +70,19 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 720px) {
 
-.borderRight {
-	border-right: none;
-}	
-
-.borderBottom {
-	border-bottom: 40px solid #fff;
+.infoForm {
+	width: 30%;
+	float: left;
+	margin-left: 2%;
 }
 
-#carousel-height {
-	min-height: 100%;
+.carouselHolder {
+	width: 62%;
+	margin-right: 2%;
+	float: right;
+
 }
 
 }
