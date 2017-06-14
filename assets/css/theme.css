@@ -1,0 +1,79 @@
+#navigation h1 {
+	font-size: 2.5em;
+	float: right;
+	margin: 10px 10px 0 0;
+}
+
+#navigation ul {
+	margin-top: 0;
+}
+
+#navigation li {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+
+.lead {
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+.info {
+	color: #000;
+}
+
+.borderRight {
+	border-right: 10px solid #fff;
+}
+
+
+.carousel:nth-child(1) {
+	background: #000 url("https://placeholdit.co//i/50x50") 0 0 no-repeat;
+	/*background-size: 100% 100%;*/
+}
+
+@media screen and (min-width: 480px) {
+#navigation {
+	border-bottom: 2px solid #000;
+	overflow-y: auto;
+
+}
+#navigation h1 {
+	float: left;
+	margin-left: 10px;
+}
+
+#navigation img {
+	float: left;
+}
+
+#navigation ul {
+	width: 40%;
+	float: right;
+	margin-top: 20px;
+}
+
+#navigation li {
+	float: left;
+
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+.borderRight {
+	border-right: none;
+}	
+
+.borderBottom {
+	border-bottom: 40px solid #fff;
+}
+
+#carousel-height {
+	min-height: 100%;
+}
+
+}
+
