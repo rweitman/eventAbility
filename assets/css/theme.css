@@ -1,0 +1,89 @@
+#navigation h1 {
+	font-size: 2.5em;
+	float: right;
+	margin: 10px 10px 0 0;
+}
+
+#navigation ul {
+	margin-top: 0;
+}
+
+#navigation li {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+
+.lead {
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+.infoForm {
+	color: #000;
+	width: 90%;
+	margin: 20px auto;
+}
+
+.borderRight {
+	border-right: 10px solid #fff;
+}
+
+
+/*.carouselHolder {
+	width: 90%;
+	margin: 30px auto;
+	
+}
+
+.carousel.carousel-slider .carousel-item {
+	border-radius: 15px 50px 0 0;
+	padding: 10px;
+	
+}*/
+
+@media screen and (min-width: 480px) {
+#navigation {
+	border-bottom: 2px solid #000;
+	overflow-y: hidden;
+
+}
+#navigation h1 {
+	float: left;
+	margin-left: 10px;
+}
+
+#navigation img {
+	float: left;
+}
+
+#navigation ul {
+	width: 40%;
+	float: right;
+	margin-top: 20px;
+}
+
+#navigation li {
+	float: left;
+
+}
+
+}
+
+@media screen and (min-width: 720px) {
+
+.infoForm {
+	width: 30%;
+	float: left;
+	margin-left: 2%;
+}
+
+.slickHolder {
+	width: 62%;
+	margin-right: 2%;
+	float: right;
+
+}
+
+}
+
