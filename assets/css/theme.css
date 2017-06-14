@@ -30,7 +30,7 @@
 }
 
 
-.carouselHolder {
+/*.carouselHolder {
 	width: 90%;
 	margin: 30px auto;
 	
@@ -40,12 +40,12 @@
 	border-radius: 15px 50px 0 0;
 	padding: 10px;
 	
-}
+}*/
 
 @media screen and (min-width: 480px) {
 #navigation {
 	border-bottom: 2px solid #000;
-	overflow-y: auto;
+	overflow-y: hidden;
 
 }
 #navigation h1 {
@@ -78,7 +78,7 @@
 	margin-left: 2%;
 }
 
-.carouselHolder {
+.slickHolder {
 	width: 62%;
 	margin-right: 2%;
 	float: right;

@@ -5,10 +5,14 @@
 	<meta charset="utf-8" lang="en">
 
 	<!-- Reset CSS -->
-	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
 	<!-- Materiailize Compiled and minified CSS -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+	<!-- Slick Carousel CSS -->
+  	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css"/>
 
   	<!-- Current Theme -->
 	<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
@@ -24,7 +28,7 @@
 		</ul>
 	</div> <!-- END NAVIGATION -->
 
-	<div>
+	
 		<div>
 			<div>
 				<p class="lead center-align">Find events near you.</p>
@@ -70,35 +74,21 @@
 					</div>
 				</div>
 			</form>
-
-			<div class="carouselHolder">		
-				<div class="carousel carousel-slider" data-indicators="true">
-	    			<div class="carousel-item indigo lighten-3" href="#one!">
-	    				<div class="eventInfo">
-					    	<h2><a href="#" class="white-text">Event Title</a></h2>
-					    	<p class="left-align white-text">Time: 12:00PM</p>
-					    	<p class="left-align white-text">Address: 1234 Random St</p>
-					    	<p class="left-align white-text">Description: Music, drink, and fun with friends</p>
-					    </div>
-					    <div class="eventLoc">
-					    	
-					    	<!-- <img src="https://placeholdit.co//i/50x50"> -->
-					    </div>
-				    </div>
-				    <div class="carousel-item amber white-text" href="#two!">
-				    	<h2>Second Panel</h2>
-				    	<p class="white-text">This is your second panel</p>
-				    </div>
-				    <div class="carousel-item green white-text" href="#three!">
-				    	<h2>Third Panel</h2>
-				    	<p class="white-text">This is your third panel</p>
-				    </div>
-				    <div class="carousel-item blue white-text" href="#four!">
-				    	<h2>Fourth Panel</h2>
-				    	<p class="white-text">This is your fourth panel</p>
-				    </div>
-	  			</div>
+			<div class="slickHolder">		
+				<div>
+					<h1>Content1</h1>
+					<img src="https://placeholdit.co//i/50x50">
+				</div>
+				<div>
+					<h1>Content2</h1>
+					<img src="https://placeholdit.co//i/500x250">
+				</div>
+				<div>
+					<h1>Content3</h1>
+					<img src="https://placeholdit.co//i/250x250">
+				</div>
 	  		</div>
+			
 		</div>
 		
 		
@@ -111,9 +101,14 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous">
 </script>
+
+<!-- Slick Carousel JS -->
+<script type="text/javascript" src="assets/js/slick.min.js"></script>
+
 <!-- Materialize Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js">
 </script>
+
 <!-- Current App Logic -->
 <script type="text/javascript" src="assets/js/app.js"></script>
 
