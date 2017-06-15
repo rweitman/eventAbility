@@ -1,0 +1,152 @@
+#navigation h1 {
+	font-size: 2.5em;
+	float: right;
+	margin: 10px 10px 0 0;
+}
+
+#navigation ul {
+	margin-top: 0;
+}
+
+#navigation li {
+	float: left;
+	width: 30%;
+	text-align: center;
+}
+
+.lead {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.infoForm {
+	color: #fff;
+	width: 90%;
+	margin: 20px auto;
+	background-color: rgba(0, 0, 0, .6);
+	border-radius: 10px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.infoForm input:focus{
+	font-size: 1.5em;
+}
+
+.borderRight {
+	border-right: 10px solid #fff;
+}
+
+
+.slickHolder {
+	width: 90%;
+	margin: 40px auto;
+	border: 1px solid #000;
+	border-radius: 10px 50px;
+	padding: 20px;
+	background-color: rgba(0,0,0, .015);
+	
+}
+
+.slickHolder h1 {
+	font-size: 3em;
+
+}
+
+.slickHolder a {
+	text-decoration: none;
+	color: #000;
+}
+
+.slickHolder img {
+	float: left;
+	margin-right: 10px;
+	border-radius: 20px;
+
+}
+
+.slickHolder p {
+	font-size: 1.3em;
+	line-height: 1.3em;
+	margin-bottom: 10px;
+}
+
+.slickHolder span {
+	font-size: 1em;
+}
+
+.formHolder {
+	width: 100%;
+	background: none;
+	
+}
+
+
+
+
+@media screen and (min-width: 480px) {
+#navigation {
+	border-bottom: 2px solid #000;
+	overflow-y: hidden;
+
+}
+#navigation h1 {
+	float: left;
+	margin-left: 10px;
+}
+
+#navigation img {
+	float: left;
+}
+
+#navigation ul {
+	width: 40%;
+	float: right;
+	margin-top: 20px;
+}
+
+#navigation li {
+	float: left;
+
+}
+
+}
+
+@media screen and (min-width: 600px) {
+
+.infoForm {
+	width: 30%;
+	float: left;
+	margin-left: 2%;
+}
+
+#formHolder {
+	width: 100%;
+	background: url('../img/hang_out3.jpg') 0 0 no-repeat;
+	overflow: auto;
+	background-size: 100%;
+	margin: 0 auto;
+}
+
+
+
+/*.slickHolder {
+	clear: both;
+	width: 90%;
+	margin: 30px auto;
+	
+}*/
+
+
+
+/*.slickHolder {
+	width: 62%;
+	margin-right: 2%;
+	float: right;
+
+}*/
+
+}
+
