@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
       // $('.carousel.carousel-slider').carousel({fullWidth: true});
     $('select').material_select();
@@ -7,6 +8,11 @@ $(document).ready(function(){
     	dots: true,
         infinite: true
       });
+
+    var form = $('#formHolder');
+    var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/img/hang_out3.jpg") 0 0 no-repeat', 'url("assets/img/rock_climbing.jpg") 0 0 no-repeat'];
+    var current = 0;
+
 
     var zip;
     var email;
@@ -82,9 +88,20 @@ $(document).ready(function(){
 
     });
 
-    var form = $('#formHolder');
-    var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/img/hang_out3.jpg") 0 0 no-repeat', 'url("assets/img/rock_climbing.jpg") 0 0 no-repeat'];
-    var current = 0;
+     // Google Maps API 
+     function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+    initMap();
     
 
     function nextBackground() {
@@ -103,9 +120,6 @@ $(document).ready(function(){
     setTimeout(nextBackground, 10000);
     form.css('background', backgrounds[0]);
 
-
-
-
-
+   
 
 }); // END READY
