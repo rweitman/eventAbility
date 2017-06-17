@@ -106,19 +106,19 @@ form.css({
 
 });
      // Google Maps API 
-     function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+    //  function initMap() {
+    //     var uluru = {lat: 33.121, lng: 131.044};
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //       zoom: 4,
+    //       center: uluru
+    //     });
+    //     var marker = new google.maps.Marker({
+    //       position: uluru,
+    //       map: map
+    //     });
+    //   }
 
-    initMap();
+    // initMap();
     
 /*************************
 EVENTFUL API
@@ -240,6 +240,26 @@ $('#submit').on('click', function (e) {
     var title = res.events[0].name.text;
     var description = res.events[0].description.text;
     var date = res.events[0].start.local;
+
+    var lat = parseFloat(res.events[0].venue.address.latitude);
+    var long = parseFloat(res.events[0].venue.address.longitude);
+
+    console.log(lat);
+    console.log(long);
+
+    function initMap() {
+        var uluru = {lat: lat, lng: long};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+
+    initMap();
 
     var $eventDiv = $('<div>');
     var $eventTitle = $('<h1>');
