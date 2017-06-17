@@ -84,7 +84,7 @@ var current = 0;
 
     // End code for firebase
 
-        console.log(interest);
+        // console.log(interest);
 
     // var pics = ['../img/concert.jpg', '../img/hang_out3.jpg', '../img/rock_climbing.jpg']
 
