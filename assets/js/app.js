@@ -11,6 +11,8 @@ $('.slickHolder').slick({
     infinite: true
 });
 
+
+
     
 /*************************
 MAIN HEADLINE SLIDESHOW
@@ -49,24 +51,29 @@ $('#submit').on('click', function (e) {
     var email = $('#email').val().trim();
     var distance = $('#distance').val().trim();
     var category = $('#category').val();
-    var date = $('#date').val();
+    var startDate = moment().format('YYYYMMDD') + "00";
+    var endDate = moment($('#date').val()).format('YYYYMMDD') + "00";
+    var dateRange = startDate + "-" + endDate;
 
     console.log('Zip: ' + zip);
     console.log('Email: ' + email);
     console.log('Distance: ' + distance);
     console.log('Category: ' + category);
-    console.log('Date: ' + date);
+    console.log('Start Date: ' + startDate);
+    console.log('Date: ' + endDate);
+    console.log('Date Range: ' + dateRange);
 
     var url = "http://api.eventful.com/json/events/search"
     var apiKey = "xLMZHfCtVBSsLdqj";
 
     url += '?' + $.param ({
         'app_key': apiKey,
-        'q': 'music',
-        'location': 75205,
-        'date': "2013061000-2017062000",
+        'q': category,
+        'location': zip,
+        'within': distance,
+        'date': dateRange,
         'page_size': 10,
-        'sort_order': "popularity"
+        'sort_order': "relevance"
 
     });
 
@@ -80,15 +87,40 @@ $('#submit').on('click', function (e) {
 
         console.log(data);
 
+        var events = data.events;
 
+        for (var i = 0; i < events.event.length; i++) {
+            
+                var $title = $('<h1>');
+                $title.append(events.event[i].title);
+
+                var $location = $('<p>');
+                $location.append(events.event[i].venue_name);
+                $location.append(events.event[i].venue_address);
+
+                var $event = $('<div>');
+                $event.append($title, $location);
+
+                $('.slickHolder').slick('slickAdd', $event);
+
+        }
 
     }); // END AJAX DONE
 
 
-
-
-
 }); // END SUBMIT CLICK LISTENER
 
+
+
+/*************************
+EVENTBRITE API
+*************************/
+
+// SAMPLE REQUEST:
+// $.ajax({
+// method: "GET",
+// url: "https://www.eventbriteapi.c..." + token + "&q=fitness&location.address=San Diego&page=3",
+// }).done(function(res) {
+// console.log(res);
 
 }); // END READY
