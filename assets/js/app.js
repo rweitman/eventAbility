@@ -12,22 +12,10 @@ $('.slickHolder').slick({
     infinite: true
 });
 
+/*********************************
+FIREBASE
+*********************************/   
 
-    var form = $('#formHolder');
-    var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/img/hang_out3.jpg") 0 0 no-repeat', 'url("assets/img/rock_climbing.jpg") 0 0 no-repeat'];
-    var current = 0;
-
-
-    
-/*************************
-MAIN HEADLINE SLIDESHOW
-*************************/
-
-var form = $('#formHolder');
-var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/img/hang_out3.jpg") 0 0 no-repeat', 'url("assets/img/rock_climbing.jpg") 0 0 no-repeat'];
-var current = 0;
-
-    // Beginning code for firebase
     var config = {
     apiKey: "AIzaSyDp5uLcLT626edyPAnj3wNW-H4ZS1m3JZc",
     authDomain: "eventability-4e0eb.firebaseapp.com",
@@ -82,12 +70,19 @@ var current = 0;
         console.log("Errors handled: " + errorObject.code);
     });
 
-    // End code for firebase
+// End code for firebase
 
-        // console.log(interest);
+// console.log(interest);
 
-    // var pics = ['../img/concert.jpg', '../img/hang_out3.jpg', '../img/rock_climbing.jpg']
+// var pics = ['../img/concert.jpg', '../img/hang_out3.jpg', '../img/rock_climbing.jpg']
 
+/*************************
+MAIN HEADLINE SLIDESHOW
+*************************/
+
+var form = $('#formHolder');
+var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/img/hang_out3.jpg") 0 0 no-repeat', 'url("assets/img/rock_climbing.jpg") 0 0 no-repeat'];
+var current = 0;
 
 function nextBackground() {
 	form.css({
@@ -105,20 +100,7 @@ form.css({
     'background-size': '100%'
 
 });
-     // Google Maps API 
-    //  function initMap() {
-    //     var uluru = {lat: 33.121, lng: 131.044};
-    //     var map = new google.maps.Map(document.getElementById('map'), {
-    //       zoom: 4,
-    //       center: uluru
-    //     });
-    //     var marker = new google.maps.Marker({
-    //       position: uluru,
-    //       map: map
-    //     });
-    //   }
-
-    // initMap();
+     
     
 /*************************
 EVENTFUL API
@@ -192,9 +174,12 @@ EVENTFUL API
 
 
 
-/*************************
-EVENTBRITE API
-*************************/
+/*******************************
+EVENTBRITE API & GOOGLE MAPS API
+*******************************/
+
+// EVENTBRITE API
+
 $('#submit').on('click', function (e) {
     e.preventDefault();
 
@@ -237,12 +222,34 @@ $('#submit').on('click', function (e) {
     }).done(function(res) {
     console.log(res);
 
-    var title = res.events[0].name.text;
-    var description = res.events[0].description.text;
-    var date = res.events[0].start.local;
+    var randomizer = Math.floor((Math.random() * 50));
 
-    var lat = parseFloat(res.events[0].venue.address.latitude);
-    var long = parseFloat(res.events[0].venue.address.longitude);
+    console.log(randomizer);
+
+    var title = res.events[randomizer].name.text;
+    var description = res.events[randomizer].description.text;
+    var date = res.events[randomizer].start.local;
+
+    var $eventDiv = $('<div>');
+    var $eventTitle = $('<h1>');
+    var $eventImg = $('<img>');
+    var $eventDes = $('<p>');
+    var $eventDate = $('<p>');
+
+    $eventTitle.append(title);
+    $eventImg.attr('src', res.events[randomizer].logo.original.url);
+    $eventDes.append(description);
+    $eventDate.append(date);
+
+    $eventDiv.append($eventTitle, $eventImg, $eventDes, $eventDate);
+
+    $('.eventHolder').append($eventDiv);
+
+
+// GOOGLE MAPS API
+
+    var lat = parseFloat(res.events[randomizer].venue.address.latitude);
+    var long = parseFloat(res.events[randomizer].venue.address.longitude);
 
     console.log(lat);
     console.log(long);
@@ -261,25 +268,30 @@ $('#submit').on('click', function (e) {
 
     initMap();
 
-    var $eventDiv = $('<div>');
-    var $eventTitle = $('<h1>');
-    var $eventImg = $('<img>');
-    var $eventDes = $('<p>');
-    var $eventDate = $('<p>');
+    // Google Maps API 
+    //  function initMap() {
+    //     var uluru = {lat: 33.121, lng: 131.044};
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //       zoom: 4,
+    //       center: uluru
+    //     });
+    //     var marker = new google.maps.Marker({
+    //       position: uluru,
+    //       map: map
+    //     });
+    //   }
 
-    $eventTitle.append(title);
-    $eventImg.attr('src', res.events[0].logo.original.url);
-    $eventDes.append(description);
-    $eventDate.append(date);
+    // initMap();
+
+    
+
+    }); // END API DONE
 
 
-    $eventDiv.append($eventTitle, $eventImg, $eventDes, $eventDate);
-
-    $('.eventHolder').append($eventDiv);
-
-    });
+}); // END CLICK ON SUBMIT
 
 
-});
+
+
 
 }); // END READY
