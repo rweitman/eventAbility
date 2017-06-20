@@ -143,10 +143,23 @@
 	margin: 0 auto;
 }
 
-#map {
+#mapps{
+	width: 600px;
+	height: 450px;
+	border: 0;
+}
+
+#mapOut {
+	width: 600px;
+	height: 450px;
+	border: 0;
+	margin: 0 auto;
+}
+
+/*map {
 	height: 400px;
 	width: 100%;
-}
+}*/
 
 
 
