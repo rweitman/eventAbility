@@ -241,25 +241,38 @@ $('#submit').on('click', function (e) {
     var description = res.events[0].description.text;
     var date = res.events[0].start.local;
 
-    var lat = parseFloat(res.events[0].venue.address.latitude);
-    var long = parseFloat(res.events[0].venue.address.longitude);
+    // var lat = parseFloat(res.events[0].venue.address.latitude);
+    // var long = parseFloat(res.events[0].venue.address.longitude);
 
-    console.log(lat);
-    console.log(long);
+    // console.log(lat);
+    // console.log(long);
 
-    function initMap() {
-        var uluru = {lat: lat, lng: long};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+    // function initMap() {
+    //     var uluru = {lat: lat, lng: long};
+    //     var map = new google.maps.Map(document.getElementById('map'), {
+    //       zoom: 4,
+    //       center: uluru
+    //     });
+    //     var marker = new google.maps.Marker({
+    //       position: uluru,
+    //       map: map
+    //     });
+    //   }
 
-    initMap();
+    // initMap();
+
+    var eName = res.events[0].venue.name;
+    var city = res.events[0].venue.address.city;
+    var state = res.events[0].venue.address.region;
+
+    console.log(eName);
+    console.log(city); 
+    console.log(state);
+
+    var mapURL = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDZO4fsXLv5ODYYBldfEUCCF63RmouiFWU&q=" 
+    + eName + "," + city + "+" + state;
+
+    $("#mapps").attr("src", mapURL);
 
     var $eventDiv = $('<div>');
     var $eventTitle = $('<h1>');
