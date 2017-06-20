@@ -8,7 +8,7 @@ MATERIALIZE & SLICK FUNCTION CALLS
 $('select').material_select();
 $('.datepicker').pickadate();
 $('.slickHolder').slick({
-    dots: true,
+	dots: true,
     infinite: true
 });
 
@@ -89,7 +89,7 @@ var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/i
 var current = 0;
 
 function nextBackground() {
-    form.css({
+	form.css({
         'background': backgrounds[current = ++current % backgrounds.length],
         'background-size': '100%'
 
