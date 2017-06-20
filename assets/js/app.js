@@ -268,9 +268,9 @@ $('#submit').on('click', function (e) {
 
     // initMap();
 
-    var eName = res.events[0].venue.name;
-    var city = res.events[0].venue.address.city;
-    var state = res.events[0].venue.address.region;
+    var eName = res.events[randomizer].venue.name;
+    var city = res.events[randomizer].venue.address.city;
+    var state = res.events[randomizer].venue.address.region;
 
     console.log(eName);
     console.log(city); 
@@ -280,7 +280,7 @@ $('#submit').on('click', function (e) {
     + eName + "," + city + "+" + state;
 
     $("#mapps").attr("src", mapURL);
-=======
+
             console.log(randomizer);
 
             var title = res.events[randomizer].name.text;
@@ -309,25 +309,25 @@ $('#submit').on('click', function (e) {
 
             // GOOGLE MAPS API
 
-            var lat = parseFloat(res.events[randomizer].venue.address.latitude);
-            var long = parseFloat(res.events[randomizer].venue.address.longitude);
+            // var lat = parseFloat(res.events[randomizer].venue.address.latitude);
+            // var long = parseFloat(res.events[randomizer].venue.address.longitude);
 
-            console.log(lat);
-            console.log(long);
+            // console.log(lat);
+            // console.log(long);
 
-            function initMap() {
-                var uluru = {lat: lat, lng: long};
-                var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 4,
-                  center: uluru
-                });
-                var marker = new google.maps.Marker({
-                  position: uluru,
-                  map: map
-                });
-              }
+            // function initMap() {
+            //     var uluru = {lat: lat, lng: long};
+            //     var map = new google.maps.Map(document.getElementById('map'), {
+            //       zoom: 4,
+            //       center: uluru
+            //     });
+            //     var marker = new google.maps.Marker({
+            //       position: uluru,
+            //       map: map
+            //     });
+            //   }
 
-            initMap();
+            // initMap();
 
         } // END randomEvent FUNCTION
 
