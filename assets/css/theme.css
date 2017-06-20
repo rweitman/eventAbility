@@ -88,7 +88,7 @@
 	margin: 0 auto;
 }
 
-.eventHolder img {
+#eventHolder img {
 	width: 300px;
 	height: 160px;
 	margin: 10px;

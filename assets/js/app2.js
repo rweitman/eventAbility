@@ -8,7 +8,7 @@ MATERIALIZE & SLICK FUNCTION CALLS
 $('select').material_select();
 $('.datepicker').pickadate();
 $('.slickHolder').slick({
-    dots: true,
+	dots: true,
     infinite: true
 });
 
@@ -89,7 +89,7 @@ var backgrounds = ['url("assets/img/concert.jpg") 0 0 no-repeat', 'url("assets/i
 var current = 0;
 
 function nextBackground() {
-    form.css({
+	form.css({
         'background': backgrounds[current = ++current % backgrounds.length],
         'background-size': '100%'
 
@@ -247,40 +247,6 @@ $('#submit').on('click', function (e) {
 
             var randomizer = Math.floor((Math.random() * 50));
 
-
-    // var lat = parseFloat(res.events[0].venue.address.latitude);
-    // var long = parseFloat(res.events[0].venue.address.longitude);
-
-    // console.log(lat);
-    // console.log(long);
-
-    // function initMap() {
-    //     var uluru = {lat: lat, lng: long};
-    //     var map = new google.maps.Map(document.getElementById('map'), {
-    //       zoom: 4,
-    //       center: uluru
-    //     });
-    //     var marker = new google.maps.Marker({
-    //       position: uluru,
-    //       map: map
-    //     });
-    //   }
-
-    // initMap();
-
-    var eName = res.events[0].venue.name;
-    var city = res.events[0].venue.address.city;
-    var state = res.events[0].venue.address.region;
-
-    console.log(eName);
-    console.log(city); 
-    console.log(state);
-
-    var mapURL = "https://www.google.com/maps/embed/v1/place?key=AIzaSyDZO4fsXLv5ODYYBldfEUCCF63RmouiFWU&q=" 
-    + eName + "," + city + "+" + state;
-
-    $("#mapps").attr("src", mapURL);
-=======
             console.log(randomizer);
 
             var title = res.events[randomizer].name.text;
@@ -354,7 +320,6 @@ $('#submit').on('click', function (e) {
     //       map: map
     //     });
     //   }
-
 
     // initMap();
 
