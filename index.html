@@ -43,7 +43,7 @@
 						<input placeholder="Zip Code" id="zip" type="text" class="validate">
 					</div>
 					<div>
-						<input placeholder="Email" id="email" type="text" class="validate">
+						<input placeholder="Email" id="email" type="text" class="validate" autocomplete="off">
 					</div>
 					<div class="input-field">
 						<select id="distance">
@@ -78,6 +78,15 @@
 		</div>
 
 		<div id="eventHolder">
+			<div id="eventDesc">
+			</div>
+			<div id="eventLoc">
+				<div id="eventLocDetails">
+				</div>
+				<div id="mapOut">
+					<iframe id="mapps"></iframe>
+				</div>
+			</div>
 			
 			
 		</div>
@@ -128,9 +137,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 
 
-<div id="mapOut">
-	<iframe id="mapps"></iframe>
-</div>
+
 
 
 <!-- 
