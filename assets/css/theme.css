@@ -1,7 +1,7 @@
 #navigation {
 	border-bottom: 2px solid #000;
 	overflow-y: hidden;
-
+	background: url('../img/Sitemap.jpg') 0 0 repeat;
 }
 #navigation h1 {
 	font-size: 2.5em;
@@ -117,6 +117,11 @@
 	font-size: 2.5em;
 	float: right;
 	margin: 10px 10px 0 0;
+
+}
+
+#navigation img {
+	width:100%;
 }
 
 #navigation ul {
